@@ -1,0 +1,212 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    /* border: 5px solid rgb(39, 59, 10);   */
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+
+.container{
+    max-width: 90vw;
+    /* background-color: aqua; */
+    padding:1.5rem;
+    margin:0px auto;
+    /* border:4px solid blue; */
+    /* 0px from top and bottom and center from left and right */
+}
+
+.header_container{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-bottom: 2.4rem;
+}
+
+.header_title{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 2.8rem; 
+}
+
+.header_content{
+    font-size: 1rem;
+    color: rgb(81, 89, 90);
+    max-width: 560px;
+    text-align: center;
+    margin: 0 auto;
+    /* because we have given some width to the content thatswhy we need to place the container of the content in the middle and hence we used     margin:0 auto     */
+}
+
+
+.main_container{
+    /* border:4px solid black; */
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4,1fr);
+    /* grid-template-rows: repeat(2,1fr); */
+
+
+    /* grid-template-columns: repeat(auto-fit,minmax(310px,30px)); */
+    /* This whole line can make your site responsive without adding or minimal media queries */
+    justify-content: center;
+    
+}
+
+
+.card_container{
+    border: 1px solid rgb(15, 51, 58);
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    width:100%;
+    transition: all 1s ease 0.5s;
+    
+}
+
+.card_container:hover .container_image{
+    transform: scale(1.1);
+    /*  This is for whenever we hover on the card only the image will get scale up  */
+}
+
+.image_container{
+    position: relative;
+    overflow: hidden;
+    height: 11rem;
+    
+}
+
+@media (min-width:1286px) {
+    .image_container{
+        height: 14rem;
+    }
+}
+
+.container_image{
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.main_text_container{
+    /* border: 4px solid brown; */
+    display: flex;
+    flex-direction: column;
+    padding:1.8rem; 
+    margin:auto;
+    max-width:19.5rem;    
+}
+
+.card_title{
+    /* margin: auto; */
+    color: black;
+    line-height: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    /* width: 20rem; */
+    /* margin:auto; */
+}
+
+.card_title_container:hover .card_title{
+    color: rgb(51, 51, 164);
+    /* it is simply in depth for hovering on anchor tag.Means whenever we hover on title the anchor tag of the title will become blue  */
+}
+
+.card_desc{
+    font-size: small;
+}
+
+
+
+
+
+
+.card_footer_container{
+    /* border: 4px solid blueviolet; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 2px 20px 20px 20px; */
+    padding-left: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.author_container{
+    /* border: 4px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap:0.5rem;
+}
+
+.author_image img{
+    /* border: 4px solid black; */
+    width: 2.4rem;
+}
+
+.author_name{
+    color:rgb(95, 93, 223)
+}
+
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2rem;
+    width: 7.5rem;
+}
+
+.card_tag_container{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin:auto;
+    padding:0.3rem 1rem 0.3rem 1rem;
+}
+
+@media (max-width:1276px){
+    .main_container{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3,1fr);
+        /* grid-template-rows: repeat(3,1fr);    */
+        
+    }
+}
+
+@media (max-width:944px){
+    .main_container{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2,1fr);
+        /* grid-template-rows: repeat(4,1fr); */
+        
+    }
+}
+
+@media (max-width:660px){
+    .main_container{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(1,1fr);
+        /* grid-template-rows: repeat(3,1fr); */
+        
+    }
+}
